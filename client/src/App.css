@@ -1,0 +1,59 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  text-align: left;
+}
+
+.table {
+  width: 100%;
+  border: 2px solid black;
+  padding: 0px;
+}
+
+.th {
+  border: 1px solid black;
+  margin:0px;
+}
+
+.likes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 30px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.form-main {
+  width: 100%;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.form-group {
+  width: 100%;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.btn {
+  width: 10%;
+}
