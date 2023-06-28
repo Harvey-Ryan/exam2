@@ -10,7 +10,7 @@ const DisplayAll = () => {
     const [allPets, setAllPets] = useState([]);
     useEffect(() => {
         axios
-            .get('http://localhost:8000/')
+            .get('http://localhost:8000/api')
             .then((res) => {
                 setAllPets(res.data);
                 console.log(res.data);
@@ -24,7 +24,7 @@ const DisplayAll = () => {
         <div className='App'>
             <div className='top-nav'>
                 <h1>Pet Shelter</h1>
-                <Link to="/pets/new">add a pet to the shelter</Link>
+                <Link to="/api/pets/new">add a pet to the shelter</Link>
             </div>
 
             <div className='header'>
@@ -45,8 +45,8 @@ const DisplayAll = () => {
                                     <td className='th'>{pet.name}</td>
                                     <td className='th'>{pet.type}</td>
                                     <td className='th'>
-                                    <Link to={`/pets/${pet._id}`}>Details</Link>&nbsp;|&nbsp;
-                                    <Link to={`/pets/${pet._id}/edit`}>Edit</Link>
+                                    <Link to={`/api/pets/${pet._id}`}>Details</Link>&nbsp;|&nbsp;
+                                    <Link to={`/api/pets/${pet._id}/edit`}>Edit</Link>
                                     </td>
                                 </tr>
                             );

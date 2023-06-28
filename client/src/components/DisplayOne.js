@@ -20,7 +20,7 @@ const DisplayOne = () => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/pets/${id}`)
+            .get(`http://localhost:8000/api/pets/${id}`)
             .then((res) => {
                 setPet(res.data);
                 console.log(res.data._id, res.data.name, res.data.description);
@@ -33,9 +33,9 @@ const DisplayOne = () => {
 
     const handleAdoptClick = () => {
         axios
-            .delete(`http://localhost:8000/pets/${id}`)
+            .delete(`http://localhost:8000/api/pets/${id}`)
             .then((res) => {
-                navigate('/');
+                navigate('/api');
                 console.log(res);
             })
             .catch((err) => {
@@ -49,7 +49,7 @@ const DisplayOne = () => {
 
             // Increment the likes in the database
             axios
-                .put(`http://localhost:8000/pets/${id}/edit`, { ...pet, likes: pet.likes + 1 })
+                .put(`http://localhost:8000/api/pets/${id}/edit`, { ...pet, likes: pet.likes + 1 })
                 .then((res) => {
                     setPet((prevState) => ({ ...prevState, likes: res.data.likes }));
                 })
@@ -63,7 +63,7 @@ const DisplayOne = () => {
         <div className='App'>
             <div className='top-nav'>
                 <h1>Pet Shelter</h1>
-                <Link to="/">back to home</Link>
+                <Link to="/api">back to home</Link>
             </div>
             <div>
                 <div className='top-nav'>

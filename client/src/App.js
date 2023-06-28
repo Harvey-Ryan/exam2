@@ -11,10 +11,10 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<DisplayAll />} />
-          <Route path={"/pets/:id"}element={<DisplayOne />} />
-          <Route path={"/pets/:id/edit"} element={<EditForm />} />
-          <Route path={"/pets/new"} element={<NewPet />} />
+          <Route path="/api" element={<DisplayAll />} />
+          <Route path={"/api/pets/:id"}element={<DisplayOne />} />
+          <Route path={"/api/pets/:id/edit"} element={<EditForm />} />
+          <Route path={"/api/pets/new"} element={<NewPet />} />
         </Routes>
       </Router>
     </div>

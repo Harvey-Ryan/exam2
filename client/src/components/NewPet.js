@@ -15,9 +15,9 @@ const CreatePet = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         axios
-        .post(`http://localhost:8000/pets/new`, pet)
+        .post(`http://localhost:8000/api/pets/new`, pet)
         .then((res) => {
-            navigate('/');
+            navigate('/api');
             console.log(res.data);
         })
         .catch((err) => {
@@ -30,7 +30,7 @@ const CreatePet = () => {
         <form className='App' onSubmit={handleSubmit}>
             <div className='top-nav'>
                 <h1>Pet Shelter</h1>
-                <Link to="/">back to home</Link>
+                <Link to="/api">back to home</Link>
             </div>
             <div>
             <h3 className='header'>Know a pet needing a home?</h3>

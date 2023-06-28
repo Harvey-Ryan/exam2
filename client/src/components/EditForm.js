@@ -19,7 +19,7 @@ const EditPet = () => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/pets/${id}`)
+            .get(`http://localhost:8000/api/pets/${id}`)
             .then((res) => {
                 setPet(res.data);
                 console.log(res.data);
@@ -36,7 +36,7 @@ const EditPet = () => {
         e.preventDefault();
         setIsSubmitting(true); // Disable the submit button
         axios
-            .put(`http://localhost:8000/pets/${id}/edit`, pet)
+            .put(`http://localhost:8000/api/pets/${id}/edit`, pet)
             .then((res) => {
                 navigate('/');
                 console.log(res.data);
@@ -57,7 +57,7 @@ const EditPet = () => {
         <form onSubmit={handleSubmit}>
             <div className='top-nav'>
                 <h1>Pet Shelter</h1>
-                <Link to='/'>back to home</Link>
+                <Link to='/api'>back to home</Link>
             </div>
             <h3 className='header'>Edit {pet.name}</h3>
             <div className='form-main'>
