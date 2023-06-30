@@ -35,7 +35,7 @@ const DisplayOne = () => {
         axios
             .delete(`http://localhost:8000/api/pets/${id}`)
             .then((res) => {
-                navigate('/api');
+                navigate('/');
                 console.log(res);
             })
             .catch((err) => {
@@ -63,7 +63,7 @@ const DisplayOne = () => {
         <div className='App'>
             <div className='top-nav'>
                 <h1>Pet Shelter</h1>
-                <Link to="/api">back to home</Link>
+                <Link to="/">back to home</Link>
             </div>
             <div>
                 <div className='top-nav'>

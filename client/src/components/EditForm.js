@@ -57,7 +57,7 @@ const EditPet = () => {
         <form onSubmit={handleSubmit}>
             <div className='top-nav'>
                 <h1>Pet Shelter</h1>
-                <Link to='/api'>back to home</Link>
+                <Link to='/'>back to home</Link>
             </div>
             <h3 className='header'>Edit {pet.name}</h3>
             <div className='form-main'>
